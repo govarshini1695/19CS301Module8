@@ -1,142 +1,128 @@
 # 19CS301Module8
 EXPTNO.8a Program to find Find the simple interest
 
-### Aim: To Write a Python Program to find Find the simple interest by getting the principal, rate and time value from the user
+### Aim: To Write a Python Program to find Find the simple interest by getting the principal, rate and time value from the user.
+
 ### Algorithm:
 
 STEP 1: Start.
-
 STEP 2: Define a function.
-
-STEP 3: Create variable 'p','r','t' for principal,rate of interest and time. STEP 4: Get the input of p,r and t from user.
-
-STEP 5 : Using the formula (p*r*t)/100 calculate the result. STEP 6: Print the result.
-
+STEP 3: Create variable 'p','r','t' for principal,rate of interest and time.
+STEP 4: Get the input of p,r and t from user.
+STEP 5 : Using the formula (p*r*t)/100 calculate the result. 
+STEP 6: Print the result.
 STEP 7: Stop.
 
 ### Program:
 ```
 def simpleInterest(p,t,r):
-      si = p*t*r/100
-       return si
-p = eval(input())
-r = eval(input())
-t = eval(input())
+    si=(p*t*r)/100
+    return si
+p,r,t=eval(input()),eval(input()),eval(input())
+
 ```
 ### Output:
 ![image](https://github.com/user-attachments/assets/0cc71222-9697-4545-a937-b330407cbc02)
 
-
-
-
-
 ### Result: Thus, the given program is implemented and executed successfully .
 
-EXPTNo.8b program to display elements from a list, present at odd index positions
+EXPTNo.8b Python program to replace the substring
 
-### Aim: To Write a python program to display elements from a list, present at odd index positions
+### Aim: To Write a python program to find the first appearance of the substring 'not' and 'poor' from a given string, if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. 
+
 ### Algorithm:
 
-STEP 1: Start.
-
-STEP 2: Define a function.
-
-STEP 3: Create a list and a variable a.
-
-STEP 4: Get the input of a from user.
-
-STEP 5 : Using loop get the inputs and append in list.
-
-STEP 6: Using another loop print the elements in the odd index position of the list. 
-
-STEP 7: Stop.
+STEP 1:Start.
+STEP 2:Read a string str1 from the user.
+STEP 3:Locate the index of "not" in the string (snot).
+STEP 4:Locate the index of "poor" in the string (spoor).
+STEP 5:If "poor" appears after "not" and both words exist in the string (snot > 0 and spoor > 0):Replace the substring "not...poor" with "good".
+STEP 6 :If the condition is met, return the modified string; otherwise, return the original string.
+STEP 7:Stop.
 
 ### Program:
 ```
-def odd(a):
-         l=[]
-          for i in range(a):
-x = int(input())
-l.append(x)
-for i in range(a):
-           if i%2!=0:
-                print(l[i], end=" ")
- a = int(input())
-odd(a)
+def not_poor(str1):
+    snot=str1.find('not')
+    spoor=str1.find('poor')
+    if spoor > snot and snot>0 and spoor>0:
+        str1=str1.replace(str1[snot:(spoor+1)],'good')
+        return str1
+    else:
+        return str1
+print(not_poor('The lyrics is good!'))
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/a13fba7c-36b5-4227-98c1-82ab22a7804a)
+![image](https://github.com/user-attachments/assets/5f7d252f-10af-4394-b4b9-a423f277270d)
 
 ### Result: Thus, the given program is implemented and executed successfully .
  
 
-EXPT NO>8C To Write a python program to Given the participants'	score sheet for your University Sports Day, you are required to find the runner-up score
-### Aim: To Write a python program to Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given scores. Store them 
-         in a list and find the score of the runner-up.
+EXPT NO>8C Python Program to print runner up score.
 
+AIM:
+To create a python program to find the runner-up score from the  participants' score sheet of n scores for your University Sports Day.  
 
 ### Algorithm:
-STEP 1: Start.
-
-STEP 2: Create a variable n.
-
-STEP 3: Get the value of n from user.
-
-STEP 4: Get the number of inputs from user and split the input and append in a list. STEP 5: Using set function remove duplicates from the list.
-
-STEP 6: Using sort function reorder the list in ascending order. STEP 7: Print the result.
-
-STEP 8: Stop.
-
+STEP 1:Start.
+STEP 2:Read an integer n (size of the array).
+STEP 3:Take n space-separated integers as input and store them in a list arr.
+STEP 4:Sort arr in ascending order.
+STEP 5:Assign large = arr[-1] (last element).
+STEP 6:Reverse arr to arrange it in descending order.
+STEP 7:Traverse the reversed list to find the first element smaller than the largest.
+STEP 8:Stop at the first smaller number and print it.
+STEP 9:Terminate the program.
 
 ### Program:
-```if  name	== '   main    ':
-          n = int(input())
-          arr = map(int, input().split())
-          arr2 = list(set(arr))
-          arr2.sort()
-print(arr2[-2])
-
+```
+n = int(input())
+arr = list(map(int, input().split()))
+arr.sort()
+large=arr[-1]
+arr.reverse()
+for i in range(len(arr)-1):
+    if arr[i+1]<arr[i]:
+        print(arr[i+1])
+        break
+```
 ### Output:
- 
-![image](https://github.com/user-attachments/assets/032939c0-f500-4bbb-9b19-87b3c54d8454)
 
- 
+![image](https://github.com/user-attachments/assets/57cbbdea-bc84-4015-823b-ff55726879e0)
 
 ### Result: Thus, the given program is implemented and executed successfully .
- 
 
 
-EX: 8.d program to square all the even numbers and cube all odd numbers from a list of integers
+EX: 8.d  Square all the even numbers and Cube all odd numbers
+
 ### Aim: To Develop a python program to square all the even numbers and cube all odd numbers from a list of integers. Get the starting and ending range to create a list.
 
 
 ### Algorithm:
 
-STEP 1: Start.
-
-STEP 2: Create a variable f and l for upper and lower limit of list. STEP 3: Get the value of f and l from user.
-
-STEP 4: Create a list.
-
-STEP 5 : Get the input from user and append in the list. STEP 6: Create a lambda function to calculate the result. STEP 7: Print the result.
-
-STEP 8 : Stop.
+STEP 1:Start.
+STEP 2:Create a variable f and l for upper and lower limit of list.
+STEP 3:Get the value of f and l from user.
+STEP 4:Create a list.
+STEP 5:Get the input from user and append in the list.
+STEP 6:Create a lambda function to calculate the result.
+STEP 7:Print the result.
+STEP 8: Stop.
 
 ### Program:
 ```
-cube = lambda x: x**2 if x%2==0 else x**3
+cube=lambda x:x**2 if x%2==0 else x**3
 def fun(f,l):
-     l1=[]
-     for i in range(f,l+1):
-           l1.append(i)
-      return l1
-f,l = int(input()),int(input())
+    l1=[]
+    for i in range(f,l+1):
+        l1.append(i)
+    return l1
+f,l=int(input()),int(input())
 
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/4a9076d8-a2cf-44e1-b7d1-e638b7edf12f)
 
+![image](https://github.com/user-attachments/assets/6bea817b-4e96-4265-a3c8-3abf23ffa14a)
 
 
 ### Result: Thus, the given program is implemented and executed successfully .
