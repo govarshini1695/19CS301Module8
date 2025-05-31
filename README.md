@@ -6,12 +6,20 @@ EXPTNO.8a Program to find Find the simple interest
 ### Algorithm:
 
 STEP 1: Start.
+
+
 STEP 2: Define a function.
+
 STEP 3: Create variable 'p','r','t' for principal,rate of interest and time.
+
 STEP 4: Get the input of p,r and t from user.
+
 STEP 5 : Using the formula (p*r*t)/100 calculate the result. 
+
 STEP 6: Print the result.
+
 STEP 7: Stop.
+
 
 ### Program:
 ```
@@ -33,12 +41,20 @@ EXPTNo.8b Python program to replace the substring
 ### Algorithm:
 
 STEP 1:Start.
+
 STEP 2:Read a string str1 from the user.
+
 STEP 3:Locate the index of "not" in the string (snot).
+
 STEP 4:Locate the index of "poor" in the string (spoor).
+
 STEP 5:If "poor" appears after "not" and both words exist in the string (snot > 0 and spoor > 0):Replace the substring "not...poor" with "good".
+
 STEP 6 :If the condition is met, return the modified string; otherwise, return the original string.
+
 STEP 7:Stop.
+
+
 
 ### Program:
 ```
@@ -64,15 +80,25 @@ AIM:
 To create a python program to find the runner-up score from the  participants' score sheet of n scores for your University Sports Day.  
 
 ### Algorithm:
+
 STEP 1:Start.
+
 STEP 2:Read an integer n (size of the array).
+
 STEP 3:Take n space-separated integers as input and store them in a list arr.
+
 STEP 4:Sort arr in ascending order.
+
 STEP 5:Assign large = arr[-1] (last element).
+
 STEP 6:Reverse arr to arrange it in descending order.
+
 STEP 7:Traverse the reversed list to find the first element smaller than the largest.
+
 STEP 8:Stop at the first smaller number and print it.
+
 STEP 9:Terminate the program.
+
 
 ### Program:
 ```
@@ -101,13 +127,21 @@ EX: 8.d  Square all the even numbers and Cube all odd numbers
 ### Algorithm:
 
 STEP 1:Start.
+
 STEP 2:Create a variable f and l for upper and lower limit of list.
+
 STEP 3:Get the value of f and l from user.
+
 STEP 4:Create a list.
+
 STEP 5:Get the input from user and append in the list.
+
 STEP 6:Create a lambda function to calculate the result.
+
 STEP 7:Print the result.
+
 STEP 8: Stop.
+
 
 ### Program:
 ```
@@ -135,20 +169,35 @@ To write a python program to perform the given commands like insert,print,delete
 pop,reverse the list.
 
 ALGORITHM:
+
 STEP 1:Start
+
 STEP 2:Initialize an empty list l.
+
 STEP 3:Take input N, which defines the number of commands to be executed.
+
 STEP 4:Loop through N times:
+
    Read a command string and split it into a list s.
+   
    Check the first element (s[0]) to determine the operation:
+   
         "insert" → Insert s[2] at position s[1] in l.
+        
         "remove" → Remove the element s[1] from l.
+        
         "append" → Add s[1] to the end of l.
+        
         "pop" → Remove the last element of l.
+        
         "sort" → Sort the list l in ascending order.
+        
         "reverse" → Reverse the order of elements in l.
+        
         "print" → Print the current state of l.
+
 STEP 5:End the loop after processing all N commands.
+
 STEP 6:End
 
 PROGRAM:
